@@ -7,8 +7,9 @@ class deleteCategoryControlller {
 			const { id } = req.params
 
 			const service = new deleteCategoryService()
-			const result = await service.execute(id)
-			return res.status(204).json({ result })
+			await service.execute(id)
+
+			return res.status(204).json({ message: "Category has been removed" })
 		} catch (error) {
 			return res.status(401).json({ error })
 		}

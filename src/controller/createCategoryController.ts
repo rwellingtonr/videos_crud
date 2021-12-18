@@ -8,9 +8,14 @@ class createCategoryController {
 		try {
 			const { name, description }: ICreateCategory = req.body
 
+			const inputData = {
+				name: name.toLowerCase(),
+				description: description.toLowerCase(),
+			}
+
 			const service = new createCategoryService()
 
-			const result = await service.execute({ name, description })
+			const result = await service.execute(inputData)
 
 			return res.status(200).json({ result: result })
 		} catch (error) {
