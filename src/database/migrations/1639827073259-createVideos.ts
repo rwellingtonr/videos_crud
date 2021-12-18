@@ -8,7 +8,7 @@ export class createVideos1639827073259 implements MigrationInterface {
 				columns: [
 					{ name: "id", type: "uuid", isPrimary: true },
 					{ name: "name", type: "varchar", isUnique: true },
-					{ name: "descriptions", type: "varchar" },
+					{ name: "description", type: "varchar" },
 					{ name: "category_id", type: "uuid" },
 					{ name: "duration", type: "numeric" },
 					{ name: "created_at", type: "timestamp", default: "now()" },
