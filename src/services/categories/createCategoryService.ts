@@ -1,8 +1,8 @@
 /* What this Service does... */
 
 import { getRepository } from "typeorm"
-import Category from "../entities/category"
-import { ICreateCategory } from "../interface"
+import Category from "../../entities/category"
+import { ICreateCategory } from "../../interface"
 
 class createCategoryService {
 	async execute({ description, name }: ICreateCategory): Promise<Category> {

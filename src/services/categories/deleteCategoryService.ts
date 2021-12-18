@@ -1,10 +1,10 @@
 /* What this Service does... */
 
 import { getRepository } from "typeorm"
-import Category from "../entities/category"
+import Category from "../../entities/category"
 
 class deleteCategoryService {
-	async execute(id: string):Promise<void> {
+	async execute(id: string): Promise<void> {
 		const repo = getRepository(Category)
 
 		if (!(await repo.findOne(id))) {

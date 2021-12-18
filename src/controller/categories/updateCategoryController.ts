@@ -1,16 +1,16 @@
 /* What this Controller does... */
 import { Request, Response } from "express"
-import { ICreateCategory } from "../interface"
-import { updateCategoryService } from "../services/updateCategoryService"
+import { ICreateCategory } from "../../interface"
+import { updateCategoryService } from "../../services/categories/updateCategoryService"
+
 class updateCategoryController {
 	async handle(req: Request, res: Response) {
 		try {
 			const { id } = req.params
-			const { description, name }: ICreateCategory = req.body
+			const { description }: ICreateCategory = req.body
 
 			const inputData = {
 				description: description.toLowerCase(),
-				name: name.toLowerCase(),
 				id,
 			}
 

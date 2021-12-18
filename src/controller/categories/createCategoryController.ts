@@ -1,7 +1,7 @@
 /* What this Controller does... */
 import { Request, Response } from "express"
-import { ICreateCategory } from "../interface"
-import { createCategoryService } from "../services/createCategoryService"
+import { ICreateCategory } from "../../interface"
+import { createCategoryService } from "../../services/categories/createCategoryService"
 
 class createCategoryController {
 	async handle(req: Request, res: Response) {

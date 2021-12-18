@@ -1,6 +1,7 @@
 /* What this Controller does... */
 import { Request, Response } from "express"
-import { deleteCategoryService } from "../services/deleteCategoryService"
+import { deleteCategoryService } from "../../services/categories/deleteCategoryService"
+
 class deleteCategoryControlller {
 	async handle(req: Request, res: Response) {
 		try {

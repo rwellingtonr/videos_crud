@@ -1,6 +1,6 @@
 /* What this Service does... */
 import { getRepository } from "typeorm"
-import Category from "../entities/category"
+import Category from "../../entities/category"
 class getAllCategoryService {
 	async execute() {
 		const getRepo = getRepository(Category)
