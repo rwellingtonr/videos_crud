@@ -3,6 +3,7 @@ import cors from "cors"
 import { createServer } from "http"
 import { routes } from "../routes/routes"
 import "dotenv/config"
+import "../database"
 
 // Start the app
 const app = express()
